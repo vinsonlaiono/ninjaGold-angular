@@ -1,0 +1,50 @@
+<!--The content below is only a placeholder and can be replaced.-->
+    <!-- link for JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Boostrap CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+        crossorigin="anonymous">
+    <!-- Socket Link -->
+    <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+    <script type="text/javascript"></script>
+<div style="text-align:center">
+  <h1>
+    Welcome to Ninj<img width="50" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=="> Gold!
+  </h1>
+</div>
+<div class="container">
+  <h3>Total Gold: {{ totalGold }}</h3>
+  <div class="row  text-center">
+    <div class="col form-control ml-1">
+      <h1>Farm</h1>
+      <p>Earns 2-5 gold</p>
+      <input type="button" (click)="farm()" class="btn btn-primary " value="Farm!">
+    </div>
+    <div class="col form-control ml-1">
+      <h1>cave</h1>
+      <p>Earns 5-10 gold</p>
+      <input (click)="cave()" type="button" class="btn btn-primary form-control" value="Cave!">
+    </div>
+    <div class="col form-control ml-1">
+      <h1>House</h1>
+      <p>Earns 7-15 gold</p>
+      <input type="button" (click)="house()" class="btn btn-primary form-control" value="House!">
+    </div>
+    <div class="col form-control ml-1">
+      <h1>Casino</h1>
+      <p>Earn or lose up to 100 gold</p>
+      <input type="button" (click)="casino()" class="btn btn-primary form-control" value="Casino!">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col form-control mt-1">
+      <h1>Adventure Log</h1>
+      <div class="text-left" *ngFor="let activity of activities ">
+        <p>{{activity}}</p>
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+
